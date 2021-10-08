@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="sorting.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Sorting Visualizer</h1>
+        <input id="slider_arr" type="range" max="100" min="5" step=5 value="40">
+        <input id="slider_del" type="range" max="500" min="10" step=10 value="100">
+        <button class="generate">New Array</button>
+        <button class="compare">compare</button>
+    </div>
+    <div class="visualWrapper">
+        <div class="visual">
+            <div class="wrapper">
+                <button class="bubble">
+                    <input type="radio" id="bubble" name="sortType" value="bub" checked>
+                    Bubble Sort
+                </button>
+                <button class="selection">
+                    <input type="radio" id="selection" name="sortType" value="sel">
+                    Selection Sort
+                </button>
+                <button class="insertion">
+                    <input type="radio" id="insertion" name="sortType" value="in">
+                    Insertion Sort
+                </button>
+                <button class="quick">
+                    <input type="radio" id="quick" name="sortType" value="qu">
+                    Quick Sort
+                </button>
+                <button class="merge">
+                    <input type="radio" id="merge" name="sortType" value="mer">
+                    Merge Sort
+                </button>
+            </div>
+            <div class="visualizer">
+            </div>
+        </div>
+        <div class="visual">
+            <div class="wrapper">
+                <button class="bubble">
+                    <input type="radio" id="bubble" name="sortType2" value="bub" checked>
+                    Bubble Sort
+                </button>
+                <button class="selection">
+                    <input type="radio" id="selection" name="sortType2" value="sel">
+                    Selection Sort
+                </button>
+                <button class="insertion">
+                    <input type="radio" id="insertion" name="sortType2" value="in">
+                    Insertion Sort
+                </button>
+                <button class="quick">
+                    <input type="radio" id="quick" name="sortType2" value="qu">
+                    Quick Sort
+                </button>
+                <button class="merge">
+                    <input type="radio" id="merge" name="sortType2" value="mer">
+                    Merge Sort
+                </button>
+            </div>
+            <div class="visualizer">
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
