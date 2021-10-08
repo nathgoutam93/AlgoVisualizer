@@ -183,6 +183,8 @@ async function insertionSort(i){
         }
 
         ele[j + 1].style.height = key;
+
+        ele[j + 1].style.background = 'green';
         
     }
 

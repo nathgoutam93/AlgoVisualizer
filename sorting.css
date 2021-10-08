@@ -1,30 +1,42 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(24, 24, 24);
+    background: rgb(43, 41, 41);
 }
 
 .navbar{
-    padding: 1rem;
+    padding: .5rem;
     background-color: rgb(24, 24, 24);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     color: cornsilk;
 }
-button{
+
+.wrapper{
     width: 100%;
-    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper div{
+    display: flex;
+    align-items: center;
+}
+button{
+    width: 5rem;
+    height: 2rem;
+    background: rgb(67, 39, 95);
     border: 1px solid dodgerblue;
-    color: dodgerblue;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     display: flex;
-    justify-content:left;
+    align-items: center;
+    justify-content: center;
 }
 .visualWrapper{
-
-    padding: 1rem;
-
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 .visual{
     padding: 0 1rem;
@@ -34,18 +46,18 @@ button{
     justify-content: space-between;
     
 }
-.wrapper{
+.radio_wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 .visualizer{
+    width: 100%;
     min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
 }
 .bar{
     width: .5rem; 
@@ -55,4 +67,22 @@ button{
 input{
     padding: 1rem;
     justify-content: space-around;
+}
+@media screen and (max-width: 480px){
+    body{
+        font:10px;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .visual{
+        flex-direction: column;
+
+    }
+    .radio_wrapper{
+        flex-direction: row;
+    }
 }
