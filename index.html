@@ -8,67 +8,89 @@
     <link rel="stylesheet" href="sorting.css">
 </head>
 <body>
-    <div class="navbar">
+    <div class="container">
         <h1>Sorting Visualizer</h1>
-        <div class="wrapper">
-            <div>
-                <input id="slider_arr" type="range" max="100" min="5" step=5 value="40">
-            <label for="slider_arr">Size</label>
+        <div class="visualWrapper">
+            <div class="visual">
+                <div class="radioWrapper">
+
+                    <input type="radio" id="bubble" name="sortType" value="bub" checked/>
+                    <input type="radio" id="selection" name="sortType" value="sel"/>
+                    <input type="radio" id="insertion" name="sortType" value="in"/>
+                    <input type="radio" id="merge" name="sortType" value="mer"/>
+                    <input type="radio" id="quick" name="sortType" value="qu"/>
+
+                    <label for="bubble" class="option bub">
+                        <span>Bubble</span> 
+                    </label>
+                    <label for="selection" class="option sel">
+                        <span>Selection</span>
+                    </label>
+                    <label for="insertion" class="option in">                       
+                        <span>Insertion</span>
+                    </label>
+                    <label for="merge" class="option mer">                       
+                        <span>Merge</span>
+                    </label>
+                    <label for="quick" class="option qu">                      
+                        <span>Quick</span>
+                    </label>
+                </div>
+                <div class="visualizer">
+                </div>
             </div>
-            <div>
-                <input id="slider_del" type="range" max="500" min="10" step=10 value="100">
-            <label for="slider_del">Speed</label>
+            <div class="visual">
+                <div class="radioWrapper">
+
+                    <input type="radio" id="bubble2" name="sortType2" value="bub" checked/>
+                    <input type="radio" id="selection2" name="sortType2" value="sel"/>
+                    <input type="radio" id="insertion2" name="sortType2" value="in"/>
+                    <input type="radio" id="merge2" name="sortType2" value="mer"/>
+                    <input type="radio" id="quick2" name="sortType2" value="qu"/>
+
+                    <label for="bubble2" class="option bub">                       
+                        <span>Bubble</span>
+                    </label>
+                    <label for="selection2" class="option sel">
+                        <span>Selection</span>
+                    </label>
+                    <label for="insertion2" class="option in">
+                        <span>Insertion</span>
+                    </label>
+                    <label for="merge2" class="option mer">
+                        <span>Merge</span>
+                    </label>
+                    <label for="quick2" class="option qu">                       
+                        <span>Quick</span>
+                    </label>
+                </div>
+                <div class="visualizer">
+                </div>
             </div>
-            <div>
-                <button class="generate">New Array</button>
-                <button class="compare">compare</button>
+        </div>
+        <div class="navbar">
+            <div class="wrapper">
+                <div>
+                    <Input id="slider_arr" class="range" type="range" 
+                    value="40" min="5" max="100" step="5"/>
+                    <label for="slider_arr">Size</label>
+                </div>
+                <div>
+                    <Input id="slider_del" class="range" type="range" 
+                    value="100" min="10" max="500" step="10"/>
+                    <label for="slider_del">Speed</label>
+                </div>
+                <div>
+                    <button class="generate">
+                        <span>New Array</span>
+                    </button>
+                    <button class="compare">
+                        <span>Compare</span>
+                    </button>
+                </div>
+                
             </div>
             
-        </div>
-        
-    </div>
-    <div class="visualWrapper">
-        <div class="visual">
-            <div class="radio_wrapper">
-                <button class="bubble">Bubble Sort
-                    <input type="radio" id="bubble" name="sortType" value="bub" checked>
-                </button>
-                <button class="selection">Selection Sort
-                    <input type="radio" id="selection" name="sortType" value="sel">
-                </button>
-                <button class="insertion">Insertion Sort
-                    <input type="radio" id="insertion" name="sortType" value="in">
-                </button>
-                <button class="merge">Merge Sort
-                    <input type="radio" id="merge" name="sortType" value="mer">
-                </button>
-                <button class="quick">Quick Sort
-                    <input type="radio" id="quick" name="sortType" value="qu">
-                </button>
-            </div>
-            <div class="visualizer">
-            </div>
-        </div>
-        <div class="visual">
-            <div class="radio_wrapper">
-                <button class="bubble">Bubble Sort
-                    <input type="radio" id="bubble" name="sortType2" value="bub" checked>
-                </button>
-                <button class="selection">Selection Sort
-                    <input type="radio" id="selection" name="sortType2" value="sel">
-                </button>
-                <button class="insertion">Insertion Sort
-                    <input type="radio" id="insertion" name="sortType2" value="in">
-                </button>
-                <button class="merge"> Merge Sort
-                    <input type="radio" id="merge" name="sortType2" value="mer">
-                </button>
-                <button class="quick"> Quick Sort
-                    <input type="radio" id="quick" name="sortType2" value="qu">
-                </button>
-            </div>
-            <div class="visualizer">
-            </div>
         </div>
     </div>
     <script src="index.js"></script>

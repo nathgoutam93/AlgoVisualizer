@@ -149,10 +149,10 @@ async function bubbleSort(i){
             ele[j+1].style.background = 'rgb(200,255,250)';
         }
 
-        ele[n-1-i].style.background = "green";
+        ele[n-1-i].style.background = "cyan";
     }
 
-    ele[0].style.background = "green";
+    ele[0].style.background = "cyan";
 
     
 }
@@ -178,13 +178,13 @@ async function insertionSort(i){
             await delayFunc(delay);
 
             for(let k = i; k >= 0; k--){
-                ele[k].style.background = 'green';
+                ele[k].style.background = 'cyan';
             }
         }
 
         ele[j + 1].style.height = key;
 
-        ele[j + 1].style.background = 'green';
+        ele[j + 1].style.background = 'cyan';
         
     }
 
@@ -225,7 +225,7 @@ async function selectionSort(i){
 
         ele[min].style.background = 'rgb(200,255,250)';
         
-        ele[i].style.background = 'green';
+        ele[i].style.background = 'cyan';
     }
 
     
@@ -266,7 +266,7 @@ async function merge(ele, low, mid, high){
         
         if(parseInt(left[i]) <= parseInt(right[j])){
             
-            (n1 + n2) === ele.length ? ele[k].style.background = 'green' : ele[k].style.background = 'lightgreen' ;
+            (n1 + n2) === ele.length ? ele[k].style.background = 'cyan' : ele[k].style.background = 'lightgreen' ;
             
             ele[k].style.height = left[i];
 
@@ -276,7 +276,7 @@ async function merge(ele, low, mid, high){
         }
         else{
             
-            (n1 + n2) === ele.length ? ele[k].style.background = 'green' : ele[k].style.background = "lightgreen" ;
+            (n1 + n2) === ele.length ? ele[k].style.background = 'cyan' : ele[k].style.background = "lightgreen" ;
 
             ele[k].style.height = right[j];
 
@@ -290,7 +290,7 @@ async function merge(ele, low, mid, high){
 
         await delayFunc(delay);
         
-        (n1 + n2) === ele.length ? ele[k].style.background = 'green' : ele[k].style.background = 'lightgreen' ;
+        (n1 + n2) === ele.length ? ele[k].style.background = 'cyan' : ele[k].style.background = 'lightgreen' ;
 
         ele[k].style.height = left[i];
 
@@ -302,7 +302,7 @@ async function merge(ele, low, mid, high){
     while(j < n2){
         await delayFunc(delay);
         
-        (n1 + n2) === ele.length ? ele[k].style.background = 'green' : ele[k].style.background = 'lightgreen';
+        (n1 + n2) === ele.length ? ele[k].style.background = 'cyan' : ele[k].style.background = 'lightgreen';
 
         ele[k].style.height = right[j];
 

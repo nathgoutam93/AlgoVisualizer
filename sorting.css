@@ -1,57 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    background: rgb(43, 41, 41);
+    background: #0069d9;
+    
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-family: Lobster Two;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar{
     padding: .5rem;
-    background-color: rgb(24, 24, 24);
     display: flex;
     align-items: center;
     color: cornsilk;
 }
-
-.wrapper{
+.navbar .wrapper{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.wrapper div{
-    display: flex;
-    align-items: center;
-}
-button{
-    width: 5rem;
-    height: 2rem;
-    background: rgb(67, 39, 95);
-    border: 1px solid dodgerblue;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.visualWrapper{
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-}
-.visual{
-    padding: 0 1rem;
-    border: 2px solid dodgerblue;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.radio_wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
 }
+.navbar .wrapper div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range {
+    width: 10rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    background: #0054ad;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgb(56, 56, 56);
+}   
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #00fd0a;
+}
+
+
+button {
+    position: relative;
+    margin: 0;
+    padding: .25rem 1rem;
+    height: 3rem;
+    width: 7.5rem;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-radius: 1rem;
+    color: #1d89ff;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+button span {
+    color: #164ca7;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }
+  
+.visual{
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: .1rem solid #fff;
+}
+
 .visualizer{
     width: 100%;
     min-height: 250px;
@@ -61,13 +150,70 @@ button{
 }
 .bar{
     width: .5rem; 
-    background: rgb(200,255,250);
+    background: #fff;
     transition: .1s height ease;
 }
-input{
-    padding: 1rem;
-    justify-content: space-around;
+
+.radioWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 }
+
+.radioWrapper .option{
+display: flex;
+align-items: center;
+justify-content: center;
+background: #fff;
+width: 100%;
+height: 100%;
+border-radius: 2px;
+cursor: pointer;
+padding: .25rem;
+border: 2px solid lightgrey;
+border-radius: .5rem;
+transition: all 0.3s ease;
+}
+
+input[type="radio"]{
+display: none;
+}
+
+#bubble:checked:checked ~ .bub,
+#selection:checked:checked ~ .sel,
+#insertion:checked ~ .in,
+#merge:checked ~ .mer,
+#quick:checked ~ .qu,
+#bubble2:checked:checked ~ .bub,
+#selection2:checked:checked ~ .sel,
+#insertion2:checked ~ .in,
+#merge2:checked ~ .mer,
+#quick2:checked ~ .qu{
+border-color: #0069d9;
+background: #0069d9;
+}
+
+.radioWrapper .option span{
+font-size: 1rem;
+color: #808080;
+}
+
+#bubble:checked:checked ~ .bub span,
+#selection:checked:checked ~ .sel span,
+#insertion:checked ~ .in span,
+#merge:checked ~ .mer span,
+#quick:checked ~ .qu span,
+#bubble2:checked:checked ~ .bub span,
+#selection2:checked:checked ~ .sel span,
+#insertion2:checked ~ .in span,
+#merge2:checked ~ .mer span,
+#quick2:checked ~ .qu span{
+color: #fff;
+}
+
 @media screen and (max-width: 480px){
     body{
         font:10px;
@@ -79,10 +225,11 @@ input{
         flex-direction: column;
     }
     .visual{
+        border:none;
         flex-direction: column;
 
     }
-    .radio_wrapper{
+    .radioWrapper{
         flex-direction: row;
     }
 }
