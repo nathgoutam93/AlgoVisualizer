@@ -363,13 +363,13 @@ async function partitionLomuto(ele, l , r){
     swap(ele[i], ele[r]); 
     
     ele[r].style.background = 'yellow';
-    ele[i].style.background = 'green';
+    ele[i].style.background = 'cyan';
 
     await delayFunc(delay);
     
     for(let k = 0; k < r + 1 ; k++){
 
-        if(ele[k].style.background != 'green') ele[k].style.background = 'cyan';
+        ele[k].style.background = 'cyan';
 
     }
 
