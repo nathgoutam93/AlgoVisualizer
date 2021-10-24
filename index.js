@@ -369,8 +369,8 @@ async function partitionLomuto(ele, l , r){
     
     for(let k = 0; k < r + 1 ; k++){
 
-        ele[k].style.background = 'cyan';
 
+        ele[k].style.background = 'cyan';
     }
 
     return i;
